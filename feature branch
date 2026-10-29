@@ -1,0 +1,23 @@
+students = [
+    {"Roll No": "101", "Name": "Alice", "Course": "Python"},
+    {"Roll No": "102", "Name": "Bob", "Course": "Data Science"}
+]
+
+def show_students():
+    print("\n--- Student Records ---")
+    for s in students:
+        print(f"Roll: {s['Roll No']} | Name: {s['Name']} | Course: {s['Course']}")
+        
+if __name__ == "__main__":
+    show_students()
+    
+    print("\n--- Add a New Student ---")
+    roll = input("Enter Roll Number: ")
+    name = input("Enter Name: ")
+    course = input("Enter Course: ")
+    
+    new_student = {"Roll No": roll, "Name": name, "Course": course}
+    students.append(new_student)
+    
+    # Show updated list
+    show_students()
